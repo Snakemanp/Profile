@@ -1,0 +1,465 @@
+
+.Home{
+    margin-top: 84px;
+    background-image: url("Home2.avif");
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: cover;
+}
+.card-button{
+    height: fit-content;
+    background-color: transparent;
+    border-width: 1px;
+    font-weight: 800;
+}
+.C{
+    .card-image{
+        background-image: url("icons/c.png");
+        background-color: #5f50e5;
+    }
+    .Name::before{
+        content: "C-lang ";
+    }
+}
+.Cp{
+    .card-image{
+        background-image: url("icons/c++.png");
+        background-color: #217bfa;
+    }
+    .Name::before{
+        content: "C++-lang ";
+    }
+}
+.React{
+    .card-image{
+        background-image: url("icons/react.png");
+        background-color: #069bff;
+    }
+    .Name::before{
+        content: "React ";
+    }
+}
+.Python{
+    .card-image{
+        background-image: url("icons/py.png");
+        background-color: rgb(251, 227, 89);
+    }
+    .Name::before{
+        content: "Python ";
+    }
+}
+.js{
+    .card-image{
+        background-image: url("icons/js.png");
+        background-color: greenyellow;
+    }
+    .Name::before{
+        content: "Javascript ";
+    }
+}
+.Css{
+    .card-image{
+        background-image: url("icons/css.png");
+        background-color: rgba(6, 51, 176, 0.821);
+    }
+    .Name::before{
+        content: "Css ";
+    }
+}
+.Html{
+    .card-image{
+        background-image: url("icons/html.png");
+        background-color: rgb(6, 131, 248);
+    }
+    .Name::before{
+        content: "Html ";
+    }
+}
+.Mongo{
+    .card-image{
+        background-image: url("icons/mongodb.png");
+        background-color: rgb(42, 247, 77);
+    }
+    .Name::before{
+        content: "Mongo-DB ";
+    }
+}
+.card{
+    transition: all 0.3s ease;
+    background-color: rgb(238, 172, 121);
+    /*background-color:rgb(185, 254, 81);*/
+    .card-image{
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: all 0.3s ease;
+    }
+    .Name{
+        font-size: 1.5vw;
+        color: white;
+    }
+}
+.card:not(:hover){
+    .card-image{
+        background-color: grey;
+    }
+    .Name{
+        text-shadow: none;
+    }
+}
+.card:hover{
+    .card-image{
+        filter: grayscale(0);
+    }
+    .Name{
+        color: red;
+        text-shadow: 2px 2px 2px black;
+    }
+}
+.Name{
+    list-style-type: none;
+    margin: auto;
+}
+
+@media screen and (min-width: 992px) {
+    .Home{
+        height: 500px;
+    }
+    .Image-container {
+        width: 12vw;
+        height: 12vw;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        left: 30vw;
+        top: 100px;
+        border: 3px solid rgb(238, 165, 110);
+    }
+    
+    .background-image {
+        background-image: url("Profile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 10.4vw;
+        height: 10.4vw;
+        border-radius: 50%;
+        position: relative;
+        left: 0.8vw;
+        top: 0.8vw;
+    }
+    
+    .Intro{
+        color:white;
+        /*background-color: aqua;*/
+        position: relative;
+        left: calc(30vw + 200px);
+        top: 0px;
+        width: fit-content;
+        font-size: x-large;
+        height: auto;
+        padding: 0 10px;
+    }
+    
+    .contact-links{
+        display: flex;
+        /*background-color: aqua;*/
+        flex-direction: row;
+        position: relative;
+        top: 100px;
+        width: 200px;
+        margin: auto;
+    }
+    
+    .iconholder{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        transition: filter 0.3s ease;
+    }
+
+    .mail-contact{
+       background-image: url("icons/gmailicon.png");
+       background-size: cover;
+        width: 35px;
+        height: 35px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        transition: filter 0.3s ease;
+    }
+
+    .mailholder:hover{
+        background-color: rgb(239, 66, 23);
+        .mail-contact{
+            background-image: url("icons/mail1.png");
+            filter: invert(1);
+            animation: rotateY 0.7s  ease;
+        }
+    }
+    
+    .linkedin-contact{
+        background-image: url("icons/linkidinicon.png");
+        background-size: cover;
+        width: 35px;
+        height: 35px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        border-radius: 5px;
+        transition: filter 0.3s ease;
+    }
+
+    .linkedinholder:hover{
+        background-color: rgb(48, 23, 239);
+        .linkedin-contact{
+            background-image: url("icons/linkedin1.png");
+            background-color: white;
+            animation: rotateY 0.7s  ease;
+        }
+    }
+    
+    .facebook-contact{
+        background-image: url("icons/facebookicon.png");
+        background-size: cover;
+        width: 35px;
+        height: 35px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        border-radius: 5px;
+        transition: filter 0.3s ease;
+    }
+
+    .facebookholder:hover{
+        background-color: rgb(56, 141, 216);
+        .facebook-contact{
+            background-image: url("icons/facebook1.png");
+            background-color: white;
+            animation: rotateY 0.7s  ease;
+        }
+    }
+    
+    .instagram-contact{
+        background-image: url("icons/instaicon.png");
+        background-size: cover;
+        width: 35px;
+        height: 35px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        transition: filter 0.3s ease;
+    }
+
+    .instaholder:hover{
+        background-color: rgb(216, 56, 192);
+        .instagram-contact{
+            filter: brightness(0) invert(1);
+            animation: rotateY 0.7s  ease;
+        }
+    }
+    
+    @keyframes rotateY {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+
+    .Expertise{
+        height: 40vw;
+        /*background-color: rgb(234, 81, 234);
+        background-color: rgb(247, 197, 158);*/
+        background-color: #d7eaf7;
+    }
+    .Label{
+        font-size: 3vw;
+        color: rgb(88, 0, 63);
+        text-shadow: 2px 2px 4px #faadde;
+        position: relative;
+        top: 6vw;       
+        margin-left: 10vw; 
+    }
+    #explabel{
+        color: #013354;
+        text-shadow: 2px 2px 4px #afdaf7;
+    }
+    .card-holder{
+        display: flex;
+        width: 80vw;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        position: relative;
+        top: 10vw;
+    }
+    .card{
+        width: 16vw;
+        height: 20vw;
+    }
+    .card-image{
+        width: 15.5vw;
+        height: 15vw;
+        margin: auto;
+        margin-top: 0.25vw;
+    }
+    .card-holder:hover .card {
+        width: 14vw;
+        .card-image{
+            width: 13.5vw;
+        }
+    }  
+    .card-holder:hover .card:hover {
+        width: 24vw;
+        background-color: rgb(243, 150, 79);
+        .card-image{
+            width: 23.5vw;
+        }
+    }
+    #Holder{
+        width: 85vw;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .card-button{
+        position: relative;
+        font-size: 1.5vw;
+        top: 17.5vw;
+    }
+    .Work{
+        background-color: rgb(240, 175, 226);
+        /*background-color: #068bff;
+        text-align: center;*/
+        height: calc( 72vw );
+    }
+    .work{
+        display: grid;
+        width: calc( 80vw + 60px);
+        height: calc( 50vw + 60px);
+        background-color: rgb(240, 175, 226);
+        margin: auto;
+        padding: 20px 20px 20px 20px;
+        position: relative;
+        top: 10vw;
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-columns: 40vw 40vw;
+        border-radius: 15px;
+    }
+
+    .work-ele{
+        width: 40vw;
+        height: 25vw;
+        border-radius: 15px;
+        filter: grayscale(1);
+        transition: filter 0.3s ease;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 0;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    .overplay{
+        width: 100%;
+        height: 100%;
+        position:relative;
+        top: 0;
+        left: -100%;
+        background-color: rgba(255, 119, 219,0.2);
+        border-radius: 15px;
+        display: flex;
+        font-size: 2vw;
+        transition: left 0.5s ease;
+        z-index: -1;
+        align-items: end;
+        padding-bottom: 40px;
+        padding-left: 40px;
+        color: white;
+        text-shadow: 2px 4px 4px black;
+    }
+
+    .work-ele:hover{
+        filter: grayscale(0);
+        box-shadow: 0px 0px 30px 10px rgb(237, 38, 187);
+    }
+
+    .work-ele:hover .overplay{
+        left: 0;
+        z-index: 0;
+    }
+
+    #proj1{
+        background-image: url("w1.png");
+    }
+
+    #proj2{
+        background-image: url("w2.png");
+    }
+    #proj3{
+        background-image: url("w3.png");
+    }
+
+    .Bottom{
+        background-color: black;
+        color: white;
+        list-style-type: none;
+        padding-left: 10vw;
+        padding-top: 10vw;
+    }
+    .b-Name{
+        font-size: 2.5vw;
+        margin-bottom: 1vw;
+        color: rgb(118, 35, 195);
+        text-shadow: 0px 2px 2px rgb(117, 61, 158);
+    }
+    .bottom-links{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2vw;
+        margin-top: 0.5vw;
+    }
+    #cv{
+        height: 50px;
+        position: relative;
+        left: 70vw;
+        top: calc( -2vw - 50px );
+        background-color: rgb(102, 61, 141);
+        color: white;
+        border-radius: 25px;
+        width: 10vw;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .Home{
+        height: 700px;
+    }
+    
+    .Image-container {
+        width: 175px;
+        height: 175px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+        position: relative;
+        top: 70px;
+        border: 3px solid rgb(238, 165, 110);
+    }
+    
+    .background-image {
+        background-image: url("Profile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: relative;
+        left: 12px;
+        top: 12px;
+    }
+}
