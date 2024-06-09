@@ -7,7 +7,7 @@ function Navbar() {
   useEffect(() => {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll(".nav-link");
-
+    console.log("currentpath:", currentPath);
     navLinks.forEach((link) => {
       if (link.getAttribute("href") === currentPath) {
         link.classList.add("active");
@@ -52,12 +52,12 @@ function Navbar() {
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/Profile/">
                   Home
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Profile">
+                <a class="nav-link" href="/Profile/cv">
                   Profile
                 </a>
               </li>
@@ -76,17 +76,26 @@ function Navbar() {
                   style={{ backgroundColor: "black" }}
                 >
                   <li>
-                    <a className="dropdown-item" href="Projects">
+                    <a
+                      className="dropdown-item"
+                      href="https://github.com/Snakemanp/SWProject.git"
+                    >
                       Project 1
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="Projects">
+                    <a
+                      className="dropdown-item"
+                      href="https://github.com/Snakemanp/Profile.git"
+                    >
                       Project 2
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="Projects">
+                    <a
+                      className="dropdown-item"
+                      href="https://github.com/Snakemanp/Game1.git"
+                    >
                       Project 3
                     </a>
                   </li>
