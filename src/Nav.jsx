@@ -57,7 +57,7 @@ function Navbar() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Profile/cv">
+                <a class="nav-link" href="/Profile/cv/">
                   Profile
                 </a>
               </li>
@@ -102,7 +102,7 @@ function Navbar() {
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contact">
+                <a class="nav-link" href="/Profile/contact/">
                   Contact Me
                 </a>
               </li>

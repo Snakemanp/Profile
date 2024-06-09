@@ -33,6 +33,13 @@ function Home() {
     cardNames[(currentIndex + 3) % cardNames.length],
     cardNames[(currentIndex + 4) % cardNames.length],
   ];
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Profile/PreethamCV.pdf";
+    link.download = "PreethamCV.pdf";
+    link.click();
+  };
+
   return (
     <div>
       <Navbar />
@@ -159,7 +166,9 @@ function Home() {
             <div className="instagram-contact" />
           </a>
         </div>
-        <button id="cv">Download CV</button>
+        <button id="cv" onClick={handleDownload}>
+          Download CV
+        </button>
       </div>
     </div>
   );
