@@ -239,6 +239,27 @@
     margin: auto;
 }
 
+.work-ele:hover{
+    filter: grayscale(0);
+    box-shadow: 0px 0px 30px 10px rgb(237, 38, 187);
+}
+
+.work-ele:hover .overplay{
+    left: 0;
+    z-index: 0;
+}
+
+#proj1{
+    background-image: url("/w1.jpg");
+}
+
+#proj2{
+    background-image: url("/w2.jpg");
+}
+#proj3{
+    background-image: url("/w3.png");
+}
+
 @media screen and (min-width: 990px) {
     .Home{
         height: 35vw;
@@ -303,7 +324,6 @@
         top: 6vw;       
         margin-left: 10vw; 
     }
-    
     
     .card{
         width: 16vw;
@@ -389,27 +409,6 @@
         text-shadow: 2px 4px 4px black;
     }
 
-    .work-ele:hover{
-        filter: grayscale(0);
-        box-shadow: 0px 0px 30px 10px rgb(237, 38, 187);
-    }
-
-    .work-ele:hover .overplay{
-        left: 0;
-        z-index: 0;
-    }
-
-    #proj1{
-        background-image: url("/w1.jpg");
-    }
-
-    #proj2{
-        background-image: url("/w2.jpg");
-    }
-    #proj3{
-        background-image: url("/w3.png");
-    }
-
     .Bottom{
         background-color: black;
         color: white;
@@ -438,6 +437,9 @@
         color: white;
         border-radius: 25px;
         width: 150px;
+    }
+    #cv:hover{
+        background-color: rgb(139, 97, 178);
     }
 }
 
@@ -469,8 +471,8 @@
         height: 26vw;
         border-radius: 50%;
         position: relative;
-        left: 2vw;
-        top: 2vw;
+        left: 1.5vw;
+        top: 1.5vw;
     }
 
     .Intro{
@@ -502,12 +504,22 @@
         color: rgb(88, 0, 63);
         text-shadow: 2px 2px 4px #faadde;
         position: relative;
-        top: 6vw;       
-        margin-left: 5vw; 
+        top: 6vw;
+        margin-left: 5vw;
     }
+
+    #Holder{
+        position: relative;
+        margin-left: 7vw;
+        top: 2vw;
+    }
+
     .card{
         width: 26.6vw;
         height: 30vw;
+        .Name{
+            font-size: 20px;
+        }
     }
     .card-image{
         width: 25vw;
@@ -535,9 +547,103 @@
         font-size: 22px;
         top: 23vw;
     }
+
+    .Work{
+        background-color: rgb(240, 175, 226);
+        /*background-color: #068bff;
+        text-align: center;*/
+        height: 200vw;
+    }
+
+    .work{
+        margin-top: 20vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+        height: 180vw;
+        background-color: rgb(240, 175, 226);
+        margin: auto;
+        position: relative;
+        top: 10vw;
+    }
+
+    .work-ele{
+        width: 80vw;
+        height: 50vw;
+        border-radius: 15px;
+        filter: grayscale(1);
+        transition: filter 0.3s ease;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 0;
+        overflow: hidden;
+        text-decoration: none;
+        margin-bottom: 10vw;
+    }
+
+    .overplay{
+        width: 100%;
+        height: 100%;
+        position:relative;
+        top: 0;
+        left: -100%;
+        background-color: rgba(255, 119, 219,0.2);
+        border-radius: 15px;
+        display: flex;
+        font-size: 2vw;
+        transition: left 0.5s ease;
+        z-index: -1;
+        align-items: end;
+        padding-bottom: 40px;
+        padding-left: 40px;
+        color: white;
+        text-shadow: 2px 4px 4px black;
+    }
+
+    .Bottom{
+        background-color: black;
+        color: white;
+        list-style-type: none;
+        padding-left: 10vw;
+        padding-top: 10vw;
+        padding-right: 10vw;
+        padding-bottom: 10vw;
+    }
+    .b-Name{
+        font-size: 40px;
+        margin-bottom: 5vw;
+        color: rgb(118, 35, 195);
+        text-shadow: 0px 2px 2px rgb(117, 61, 158);
+    }
+    .bottom-links{
+        margin: auto;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        width: 200px;
+    }
+    #cv{
+        height: 50px;
+        background-color: rgb(102, 61, 141);
+        color: white;
+        border-radius: 25px;
+        width: 150px;
+        margin-left: calc( 40vw - 75px );
+        margin-top: 25px;
+    }
+
+    #cv:hover{
+        background-color: rgb(165, 124, 204);
+    }
 }
 
 @media screen and (max-width: 600px) {
+    #Holder{
+        margin-left: 4vw;
+    }
+
     .card{
         width: 40vw;
         height: 40vw;
@@ -555,7 +661,7 @@
         .card-image{
             width: 26vw;
         }
-    }  
+    }
 
     .card-holder:hover .card:hover {
         width: 50vw;
