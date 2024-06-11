@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <Routes>
         <Route index element={<Home />} />
-        <Route path="*" element={<Navbar />} />
       </Routes>
     </div>
   );
