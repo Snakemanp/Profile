@@ -59,7 +59,7 @@ function Navbar() {
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="/Profile/PreethamCV"
+                  href="/Profile/PreethamCV.pdf"
                   download={"PreethamCV.pdf"}
                 >
                   Profile
