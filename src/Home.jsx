@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./Nav";
 import "./Home.css";
 
@@ -14,7 +14,40 @@ function Home() {
     "Html",
     "Mongo",
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCards, setVisibleCards] = useState([]);
+
+  const getVisibleCardsCount = () => {
+    if (window.innerWidth < 600) return 2;
+    return window.innerWidth < 990 ? 3 : 5;
+  };
+
+  useEffect(() => {
+    const count = getVisibleCardsCount();
+    const newVisibleCards = [];
+    for (let i = 0; i < count; i++) {
+      newVisibleCards.push(cardNames[(currentIndex + i) % cardNames.length]);
+    }
+    setVisibleCards(newVisibleCards);
+  }, [currentIndex, cardNames]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const count = getVisibleCardsCount();
+      const newVisibleCards = [];
+      for (let i = 0; i < count; i++) {
+        newVisibleCards.push(cardNames[(currentIndex + i) % cardNames.length]);
+      }
+      setVisibleCards(newVisibleCards);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [currentIndex, cardNames]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cardNames.length);
@@ -26,13 +59,6 @@ function Home() {
     );
   };
 
-  const visibleCards = [
-    cardNames[currentIndex],
-    cardNames[(currentIndex + 1) % cardNames.length],
-    cardNames[(currentIndex + 2) % cardNames.length],
-    cardNames[(currentIndex + 3) % cardNames.length],
-    cardNames[(currentIndex + 4) % cardNames.length],
-  ];
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/Profile/PreethamCV.pdf";
@@ -129,7 +155,6 @@ function Home() {
               <br />A Game Written by Me in C++
             </div>
           </a>
-          <div className="work-ele" id="proj4"></div>
         </div>
         <div className="spacer"></div>
       </div>

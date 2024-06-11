@@ -57,7 +57,11 @@ function Navbar() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Profile/cv/">
+                <a
+                  class="nav-link"
+                  href="/Profile/PreethamCV"
+                  download={"PreethamCV.pdf"}
+                >
                   Profile
                 </a>
               </li>
@@ -100,11 +104,6 @@ function Navbar() {
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/Profile/contact/">
-                  Contact Me
-                </a>
               </li>
             </ul>
           </div>

@@ -1,4 +1,3 @@
-
 .Home{
     margin-top: 84px;
     background-image: url("/Home2.avif");
@@ -6,12 +5,131 @@
     width: 100vw;
     background-size: cover;
 }
+.iconholder{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: filter 0.3s ease;
+}
+
+.mail-contact{
+   background-image: url("/icons/gmailicon.png");
+   background-size: cover;
+    width: 35px;
+    height: 35px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    transition: filter 0.3s ease;
+}
+
+.mailholder:hover{
+    background-color: rgb(239, 66, 23);
+    .mail-contact{
+        background-image: url("/icons/mail1.png");
+        filter: invert(1);
+        animation: rotateY 0.7s  ease;
+    }
+}
+
+.linkedin-contact{
+    background-image: url("/icons/linkidinicon.png");
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    transition: filter 0.3s ease;
+}
+
+.linkedinholder:hover{
+    background-color: rgb(48, 23, 239);
+    .linkedin-contact{
+        background-image: url("/icons/linkedin1.png");
+        background-color: white;
+        animation: rotateY 0.7s  ease;
+    }
+}
+
+.facebook-contact{
+    background-image: url("/icons/facebookicon.png");
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    transition: filter 0.3s ease;
+}
+
+.facebookholder:hover{
+    background-color: rgb(56, 141, 216);
+    .facebook-contact{
+        background-image: url("/icons/facebook1.png");
+        background-color: white;
+        animation: rotateY 0.7s  ease;
+    }
+}
+
+.instagram-contact{
+    background-image: url("/icons/instaicon.png");
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    transition: filter 0.3s ease;
+}
+
+.instaholder:hover{
+    background-color: rgb(216, 56, 192);
+    .instagram-contact{
+        filter: brightness(0) invert(1);
+        animation: rotateY 0.7s  ease;
+    }
+}
+
+@keyframes rotateY {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#explabel{
+    color: #013354;
+    text-shadow: 2px 2px 4px #afdaf7;
+}
+
+#Holder{
+    width: 85vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-holder{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    top: 10vw;
+}
+
 .card-button{
     height: fit-content;
     background-color: transparent;
     border-width: 1px;
     font-weight: 800;
 }
+
 .C{
     .card-image{
         background-image: url("/icons/c.png");
@@ -86,8 +204,8 @@
 }
 .card{
     transition: all 0.3s ease;
-    background-color: rgb(238, 172, 121);
-    /*background-color:rgb(185, 254, 81);*/
+    /*background-color: rgb(238, 172, 121);*/
+    background-color: #be80df;;
     .card-image{
         background-repeat: no-repeat;
         background-size: contain;
@@ -121,9 +239,9 @@
     margin: auto;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 990px) {
     .Home{
-        height: 500px;
+        height: 35vw;
     }
     .Image-container {
         width: 12vw;
@@ -171,102 +289,6 @@
         margin: auto;
     }
     
-    .iconholder{
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        transition: filter 0.3s ease;
-    }
-
-    .mail-contact{
-       background-image: url("/icons/gmailicon.png");
-       background-size: cover;
-        width: 35px;
-        height: 35px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        transition: filter 0.3s ease;
-    }
-
-    .mailholder:hover{
-        background-color: rgb(239, 66, 23);
-        .mail-contact{
-            background-image: url("/icons/mail1.png");
-            filter: invert(1);
-            animation: rotateY 0.7s  ease;
-        }
-    }
-    
-    .linkedin-contact{
-        background-image: url("/icons/linkidinicon.png");
-        background-size: cover;
-        width: 35px;
-        height: 35px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        border-radius: 5px;
-        transition: filter 0.3s ease;
-    }
-
-    .linkedinholder:hover{
-        background-color: rgb(48, 23, 239);
-        .linkedin-contact{
-            background-image: url("/icons/linkedin1.png");
-            background-color: white;
-            animation: rotateY 0.7s  ease;
-        }
-    }
-    
-    .facebook-contact{
-        background-image: url("/icons/facebookicon.png");
-        background-size: cover;
-        width: 35px;
-        height: 35px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        border-radius: 5px;
-        transition: filter 0.3s ease;
-    }
-
-    .facebookholder:hover{
-        background-color: rgb(56, 141, 216);
-        .facebook-contact{
-            background-image: url("/icons/facebook1.png");
-            background-color: white;
-            animation: rotateY 0.7s  ease;
-        }
-    }
-    
-    .instagram-contact{
-        background-image: url("/icons/instaicon.png");
-        background-size: cover;
-        width: 35px;
-        height: 35px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        transition: filter 0.3s ease;
-    }
-
-    .instaholder:hover{
-        background-color: rgb(216, 56, 192);
-        .instagram-contact{
-            filter: brightness(0) invert(1);
-            animation: rotateY 0.7s  ease;
-        }
-    }
-    
-    @keyframes rotateY {
-        from {
-            transform: rotateY(0deg);
-        }
-        to {
-            transform: rotateY(360deg);
-        }
-    }
-
     .Expertise{
         height: 40vw;
         /*background-color: rgb(234, 81, 234);
@@ -281,19 +303,8 @@
         top: 6vw;       
         margin-left: 10vw; 
     }
-    #explabel{
-        color: #013354;
-        text-shadow: 2px 2px 4px #afdaf7;
-    }
-    .card-holder{
-        display: flex;
-        width: 80vw;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        position: relative;
-        top: 10vw;
-    }
+    
+    
     .card{
         width: 16vw;
         height: 20vw;
@@ -312,17 +323,13 @@
     }  
     .card-holder:hover .card:hover {
         width: 24vw;
-        background-color: rgb(243, 150, 79);
+        /*background-color: rgb(243, 150, 79);*/
+        background-color: rgb(141, 91, 188);
         .card-image{
             width: 23.5vw;
         }
     }
-    #Holder{
-        width: 85vw;
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
-    }
+    
     .card-button{
         position: relative;
         font-size: 1.5vw;
@@ -430,23 +437,26 @@
         background-color: rgb(102, 61, 141);
         color: white;
         border-radius: 25px;
-        width: 10vw;
+        width: 150px;
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 990px) {
     .Home{
-        height: 700px;
+        height: calc( 70vw + 50px );
+        text-align: center;
+        color: white;
+        font-size: 2vw;
     }
     
     .Image-container {
-        width: 175px;
-        height: 175px;
+        width: 30vw;
+        height: 30vw;
         border-radius: 50%;
         overflow: hidden;
         margin: auto;
         position: relative;
-        top: 70px;
+        top: 10vw;
         border: 3px solid rgb(238, 165, 110);
     }
     
@@ -455,11 +465,109 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        width: 150px;
-        height: 150px;
+        width: 26vw;
+        height: 26vw;
         border-radius: 50%;
         position: relative;
-        left: 12px;
-        top: 12px;
+        left: 2vw;
+        top: 2vw;
+    }
+
+    .Intro{
+        position: relative;
+        font-size: x-large;
+        padding: 0 10px;
+        top: 15vw;
+    }
+
+    .contact-links{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 200px;
+        margin: auto;
+        top: 18vw;
+    }
+
+    .Expertise{
+        height: 70vw;
+        /*background-color: rgb(234, 81, 234);
+        background-color: rgb(247, 197, 158);*/
+        background-color: #d7eaf7;
+    }
+
+    .Label{
+        font-size: 30px;
+        color: rgb(88, 0, 63);
+        text-shadow: 2px 2px 4px #faadde;
+        position: relative;
+        top: 6vw;       
+        margin-left: 5vw; 
+    }
+    .card{
+        width: 26.6vw;
+        height: 30vw;
+    }
+    .card-image{
+        width: 25vw;
+        height: 20vw;
+        margin: auto;
+        margin-top: 2vw;
+    }
+    .card-holder:hover .card {
+        width:20vw;
+        .card-image{
+            width: 18vw;
+        }
+    }  
+    .card-holder:hover .card:hover {
+        width: 40vw;
+        /*background-color: rgb(243, 150, 79);*/
+        background-color: rgb(141, 91, 188);
+        .card-image{
+            width: 36vw;
+        }
+    }
+    
+    .card-button{
+        position: relative;
+        font-size: 22px;
+        top: 23vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card{
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .card-image{
+        width: 36vw;
+        height: 30vw;
+        margin: auto;
+        margin-top: 2vw;
+    }
+
+    .card-holder:hover .card {
+        width: 30vw;
+        .card-image{
+            width: 26vw;
+        }
+    }  
+
+    .card-holder:hover .card:hover {
+        width: 50vw;
+        /*background-color: rgb(243, 150, 79);*/
+        background-color: rgb(141, 91, 188);
+        .card-image{
+            width: 46vw;
+        }
+    }
+    
+    .card-button{
+        position: relative;
+        font-size: 18px;
+        top: 24vw;
     }
 }
