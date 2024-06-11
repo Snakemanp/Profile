@@ -552,7 +552,8 @@
         background-color: rgb(240, 175, 226);
         /*background-color: #068bff;
         text-align: center;*/
-        height: 200vw;
+        height: 201vw;
+        padding-bottom: 10vw;
     }
 
     .work{
