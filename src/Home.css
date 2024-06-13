@@ -259,6 +259,9 @@
 #proj3{
     background-image: url("/w3.png");
 }
+#proj4{
+    background-image: url("/Huffman.png");
+}
 
 @media screen and (min-width: 990px) {
     .Home{
