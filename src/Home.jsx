@@ -158,7 +158,7 @@ function Home() {
           <a
             className="work-ele"
             id="proj4"
-            href="https://github.com/Snakemanp/Game1.git"
+            href="https://github.com/Snakemanp/Huffman-Compression.git"
           >
             <div className="overplay">
               Huffman-Coding
