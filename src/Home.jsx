@@ -152,7 +152,7 @@ function Home() {
           >
             <div className="overplay">
               Mega-Man
-              <br />A Game similar to mario without game engines
+              <br />A Game similar to mario without game engines.
             </div>
           </a>
           <a
