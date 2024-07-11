@@ -151,8 +151,8 @@ function Home() {
             href="https://github.com/Snakemanp/Game1.git"
           >
             <div className="overplay">
-              Geo-Wars
-              <br />A Game Written by Me in C++
+              Mega-Man
+              <br />A Game similar to mario without game engines
             </div>
           </a>
           <a
@@ -165,8 +165,17 @@ function Home() {
               <br />A c++ code to compress and decode the data in .txt file
             </div>
           </a>
+          <a
+            className="work-ele"
+            id="proj5"
+            href="https://github.com/Snakemanp/Game1.git"
+          >
+            <div className="overplay">
+              Geo-Wars
+              <br />A Game Written by Me in C++ without game engine
+            </div>
+          </a>
         </div>
-        <div className="spacer"></div>
       </div>
       <div className="Bottom">
         <li className="b-Name">Preetham</li>

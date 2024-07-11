@@ -257,11 +257,14 @@
     background-image: url("/w2.jpg");
 }
 #proj3{
-    background-image: url("/w3.png");
+    background-image: url("/w5.jpg");
 }
 #proj4{
     background-image: url("/Huffman.png");
     background-color: black;
+}
+#proj5{
+    background-image: url("/w3.png");
 }
 
 @media screen and (min-width: 990px) {
@@ -363,12 +366,13 @@
         background-color: rgb(240, 175, 226);
         /*background-color: #068bff;
         text-align: center;*/
-        height: calc( 72vw );
+        display: grid;
+        height: auto;
     }
     .work{
         display: grid;
-        width: calc( 80vw + 60px);
-        height: calc( 50vw + 60px);
+        width: auto;
+        height: auto;
         background-color: rgb(240, 175, 226);
         margin: auto;
         padding: 20px 20px 20px 20px;
@@ -378,6 +382,7 @@
         column-gap: 20px;
         grid-template-columns: 40vw 40vw;
         border-radius: 15px;
+        margin-bottom: 10vw;
     }
 
     .work-ele{
