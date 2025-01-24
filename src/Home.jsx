@@ -14,7 +14,6 @@ function Home() {
     "Html",
     "Mongo",
   ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState([]);
 
@@ -23,31 +22,33 @@ function Home() {
     return window.innerWidth < 990 ? 3 : 5;
   };
 
-  useEffect(() => {
+  const updateVisibleCards = () => {
     const count = getVisibleCardsCount();
     const newVisibleCards = [];
     for (let i = 0; i < count; i++) {
       newVisibleCards.push(cardNames[(currentIndex + i) % cardNames.length]);
     }
     setVisibleCards(newVisibleCards);
-  }, [currentIndex, cardNames]);
+  };
 
   useEffect(() => {
-    const handleResize = () => {
-      const count = getVisibleCardsCount();
-      const newVisibleCards = [];
-      for (let i = 0; i < count; i++) {
-        newVisibleCards.push(cardNames[(currentIndex + i) % cardNames.length]);
-      }
-      setVisibleCards(newVisibleCards);
+    updateVisibleCards();
+  }, [currentIndex]);
+
+  useEffect(() => {
+    const debounceResize = () => {
+      clearTimeout(window.resizeTimeout);
+      window.resizeTimeout = setTimeout(() => {
+        updateVisibleCards();
+      }, 200);
     };
 
-    window.addEventListener("resize", handleResize);
-
+    window.addEventListener("resize", debounceResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", debounceResize);
+      clearTimeout(window.resizeTimeout);
     };
-  }, [currentIndex, cardNames]);
+  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cardNames.length);
@@ -66,9 +67,18 @@ function Home() {
     link.click();
   };
 
+  const [project, setProject] = useState({ projects: [] });
+  useEffect(() => {
+    fetch("/Profile/work.json")
+      .then((response) => response.json())
+      .then((data) => setProject(data))
+      //.then(console.log(project.projects))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <div>
-      <Navbar />
+      <Navbar projects={project.projects} />
       <div className="Home">
         <div className="Image-container">
           <div className="background-image"></div>
@@ -129,52 +139,20 @@ function Home() {
       <div className="Work">
         <label className="Label">My Work</label>
         <div className="work">
-          <a
-            className="work-ele"
-            id="proj1"
-            href="https://github.com/Snakemanp/SWProject.git"
-          >
-            <div className="overplay">
-              SSFDS
-              <br />A platform for Restaurants and Ngos
-            </div>
-          </a>
-          <a className="work-ele" id="proj2" href="">
-            <div className="overplay">
-              ProfileSite
-              <br />A Site to Introduce Myself
-            </div>
-          </a>
-          <a
-            className="work-ele"
-            id="proj3"
-            href="https://github.com/Snakemanp/Game1.git"
-          >
-            <div className="overplay">
-              Mega-Man
-              <br />A Game similar to mario without game engines.
-            </div>
-          </a>
-          <a
-            className="work-ele"
-            id="proj4"
-            href="https://github.com/Snakemanp/Huffman-Compression.git"
-          >
-            <div className="overplay">
-              Huffman-Coding
-              <br />A c++ code to compress and decode the data in .txt file
-            </div>
-          </a>
-          <a
-            className="work-ele"
-            id="proj5"
-            href="https://github.com/Snakemanp/Game1.git"
-          >
-            <div className="overplay">
-              Geo-Wars
-              <br />A Game Written by Me in C++ without game engine
-            </div>
-          </a>
+          {project.projects.map((Prjt, index) => (
+            <a
+              key={index} // Unique key for each element
+              className="work-ele"
+              style={{ backgroundImage: `url(${Prjt.Image})` }} // Properly set the background image
+              href={Prjt.url}
+            >
+              <div className="overplay">
+                {Prjt.Name}
+                <br />
+                {Prjt.Description}
+              </div>
+            </a>
+          ))}
         </div>
       </div>
       <div className="Bottom">

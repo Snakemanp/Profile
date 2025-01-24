@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Nav.css";
 import { Dropdown } from "bootstrap";
 
-function Navbar() {
+function Navbar(projects) {
   useEffect(() => {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll(".nav-link");
@@ -79,30 +79,13 @@ function Navbar() {
                   className="dropdown-menu"
                   style={{ backgroundColor: "black" }}
                 >
-                  <li>
-                    <a
-                      className="dropdown-item"
-                      href="https://github.com/Snakemanp/SWProject.git"
-                    >
-                      Project 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="dropdown-item"
-                      href="https://github.com/Snakemanp/Profile.git"
-                    >
-                      Project 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="dropdown-item"
-                      href="https://github.com/Snakemanp/Game1.git"
-                    >
-                      Project 3
-                    </a>
-                  </li>
+                  {projects.projects.map((proj, index) => (
+                    <li key={index}>
+                      <a className="dropdown-item" href={proj.url}>
+                        {proj.Name}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </li>
             </ul>

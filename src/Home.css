@@ -249,24 +249,6 @@
     z-index: 0;
 }
 
-#proj1{
-    background-image: url("/w1.jpg");
-}
-
-#proj2{
-    background-image: url("/w2.jpg");
-}
-#proj3{
-    background-image: url("/w5.jpg");
-}
-#proj4{
-    background-image: url("/Huffman.png");
-    background-color: black;
-}
-#proj5{
-    background-image: url("/w3.png");
-}
-
 @media screen and (min-width: 990px) {
     .Home{
         height: 35vw;
@@ -570,7 +552,7 @@
         flex-direction: column;
         align-items: center;
         width: 80vw;
-        height: 180vw;
+        height: auto;
         background-color: rgb(240, 175, 226);
         margin: auto;
         position: relative;
