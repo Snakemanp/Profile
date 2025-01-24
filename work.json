@@ -1,0 +1,34 @@
+{
+    "projects" : [
+        {   
+            "Name":"SSFDS",
+            "Description": "A platform for Restaurants and Ngos",
+            "Image": "Work/w1.jpg",
+            "url": "https://github.com/Snakemanp/SWProject.git"
+        },
+        {
+            "Name":"ProfileSite",
+            "Description": "A Site to Introduce Myself",
+            "Image": "Work/w2.jpg",
+            "url": ""
+        },
+        {
+            "Name":"Mega-Man",
+            "Description": "A Game similar to mario without game engines.",
+            "Image": "Work/w3.jpg",
+            "url": "https://github.com/Snakemanp/Mega-Man.git"
+        },
+        {
+            "Name":"Huffman-Coding",
+            "Description": "A c++ code to compress and decode the data in .txt file",
+            "Image": "Work/w4.png",
+            "url": "https://github.com/Snakemanp/Huffman-Compression.git"
+        },
+        {
+            "Name":"Geo-Wars",
+            "Description": "A Game Written by Me in C++ without game engine",
+            "Image": "Work/w5.png",
+            "url": "https://github.com/Snakemanp/Game1.git"
+        }
+    ]
+}
