@@ -1,5 +1,17 @@
 {
     "projects" : [
+        {
+            "Name":"SQl Query Optimizer",
+            "Description": "A project to optimize the sql queries using c",
+            "Image": "Work/w0.png",
+            "url": "https://github.com/Snakemanp/DBMS-term"
+        },
+        {
+            "Name":"Image-Captioning Model",
+            "Description": "An Image captioning model using ViT and DistilGpt-2 as encoder and decoder",
+            "Image": "Work/w6.png",
+            "url": "https://github.com/Snakemanp/Image-Captioning"
+        },
         {   
             "Name":"SSFDS",
             "Description": "A platform for Restaurants and Ngos",
